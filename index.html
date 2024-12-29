@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+ <div class="main flex justify-center  ">
+<div class="cal min-[300px]:w-[80%] sm:w-[50%] md:w-[40%] lg:w-[30%] xl:w-[20%]     text-white bg-black border-2 border-black w-[22%] h-[54 text-white0px] mt-5 rounded-[20px]  ">
+<input id="inp" readonly class="w-[100%] h-[100px] bg-black rounded-[20px] text-[3rem]  border-2 border-black" type="text" placeholder="0"  name="" id="">
+
+<div class="btns flex justify-around mt-2 p-2">
+    
+    <button onclick="delAll()" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center text-red-500" >AC</button>
+    <button onclick="delOne()" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center text-purple-500" >DEL</button>
+    <button onclick="setnum('%')" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center text-purple-500" >%</button>
+    <button onclick="setnum('/')" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center text-purple-500" >/</button>
+
+</div>
+<div class="btns flex justify-around mt-2  p-2">
+    
+    <button onclick="setnum('7')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center text-white " >7</button>
+    <button onclick="setnum('8')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center  text-white" >8</button>
+    <button onclick="setnum('9')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center  text-white" >9</button>
+    <button onclick="setnum('*')" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center  text-purple-500" >X</button>
+
+</div>
+<div class="btns flex justify-around mt-2  p-2">
+    
+    <button onclick="setnum('4')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-white " >4</button>
+    <button onclick="setnum('5')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-white " >5</button>
+    <button onclick="setnum('6')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[1.5rem] text-center text-white " >6</button>
+    <button onclick="setnum('-')" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[2rem] text-center   text-purple-500" >-</button>
+
+</div>
+<div class="btns flex justify-around mt-2  p-2">
+    
+    <button onclick="setnum('1')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-white " >1</button>
+    <button onclick="setnum('2')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-white" >2</button>
+    <button onclick="setnum('3')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-white" >3</button>
+    <button onclick="setnum('+')" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500  text-[2rem] text-center  text-purple-500" >+</button>
+
+</div>
+<div class="btns flex justify-around mt-2  p-2">
+    
+    <button onclick="setnum('00')" class="bg-gray-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-purple-500" >00</button>
+    <button onclick="setnum('0')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-white" >0</button>
+    <button onclick="setnum('.')" class="bg-gray-900 border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[1.5rem] text-center  text-white" >.</button>
+    <button onclick="cal()" class=" bg-purple-900 font-bold border-none w-[60px] h-[60px] rounded-[50%]  hover:text-white  hover:bg-red-500 text-[2rem] text-center  text-white" >=</button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+ </div>
+</body>
+<script src="app.js"></script>
+</html>
